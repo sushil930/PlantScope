@@ -1,0 +1,280 @@
+{
+  "brand": "PlantScope AI",
+  "nav": {
+    "home": "Home",
+    "identify": "Identify Plant",
+    "history": "History",
+    "about": "About",
+    "toggleMenu": "Toggle navigation menu",
+    "languageLabel": "Switch language"
+  },
+  "home": {
+    "headline": "Discover the science behind every plant.",
+    "subheadline": "Identify plant species, explore botanical classification and detect possible plant diseases using AI.",
+    "primaryCta": "Identify a Plant",
+    "secondaryCta": "Explore How It Works",
+    "specimenCaption": "Herbarium & field photography supported · Up to 5 angles per specimen",
+    "featuresTitle": "Botanical analysis powered by PlantScope AI",
+    "featuresSubtitle": "PlantScope AI separates visual species identification, scientific taxonomic classification, and preliminary pathology screening into transparent scientific stages.",
+    "features": {
+      "identification": {
+        "index": "01",
+        "title": "Plant Identification",
+        "description": "Upload 1 to 5 photographs of the same individual plant—leaves, flowers, fruits, or bark—to retrieve ranked species candidates, common names, and match scores."
+      },
+      "disease": {
+        "index": "02",
+        "title": "Disease Detection",
+        "description": "Run optional beta plant pathology screening to surface standardized EPPO pathology codes, model scores, and reference imagery where supported."
+      },
+      "classification": {
+        "index": "03",
+        "title": "Scientific Classification",
+        "description": "Every top candidate is cross-checked against a structured botanical taxonomy backbone to present verified seven-rank taxonomy from Kingdom through Species, plus known synonyms."
+      }
+    },
+    "howItWorks": {
+      "title": "How a botanical scan works",
+      "step1Title": "Capture or upload specimen photos",
+      "step1Desc": "Select up to five clear JPG or PNG images of a single plant. Optional organ tags improve matching accuracy.",
+      "step2Title": "Identify & verify taxonomy",
+      "step2Desc": "Images are processed in memory by the botanical recognition model and the leading scientific name is resolved into its complete taxonomic hierarchy.",
+      "step3Title": "Review, save, or print report",
+      "step3Desc": "Inspect ranked candidates, seven-rank taxonomy, and optional beta disease screening. Save structured records locally in IndexedDB."
+    },
+    "attribution": "Botanical species identification & taxonomy workbench.",
+    "gbifAttribution": "Verified seven-rank scientific taxonomy classification.",
+    "privacyNote": "Photographs are analyzed in memory and never stored on the server."
+  },
+  "scanner": {
+    "title": "Identify a Plant Specimen",
+    "subtitle": "Upload clear photographs of one individual plant. Species identification and beta disease screening are clearly separated in your report.",
+    "samePlantNote": "All uploaded photographs (maximum 5) must depict the same individual plant.",
+    "dropzoneTitle": "Drop plant photographs here, or browse files",
+    "dropzoneFormats": "Accepted formats: JPG, JPEG, PNG · Up to 5 images · Max 10 MB each",
+    "browseButton": "Browse Files",
+    "cameraButton": "Use Camera",
+    "imageCount": "{{count}} / {{max}} images selected",
+    "removeImage": "Remove {{name}}",
+    "organLabel": "Plant organ",
+    "organs": {
+      "auto": "Auto-detect",
+      "leaf": "Leaf",
+      "flower": "Flower",
+      "fruit": "Fruit",
+      "bark": "Bark"
+    },
+    "optionsTitle": "Analysis Options",
+    "diseaseToggleLabel": "Include Plant Disease Analysis (Beta)",
+    "diseaseToggleNote": "Consumes 1 additional daily scan request. Disease coverage is limited to supported crops and pathologies.",
+    "savePhotoLocalLabel": "Save thumbnail locally in browser history",
+    "savePhotoLocalNote": "Disabled by default. When enabled, a compressed preview stays only in your browser's IndexedDB.",
+    "analyzeButton": "Run Botanical Analysis",
+    "analyzingButton": "Analyzing Specimen...",
+    "uploadProgress": "Uploading photographs: {{percent}}%",
+    "processingStage": "Analyzing specimen imagery and botanical taxonomy...",
+    "clearAll": "Clear Images",
+    "quota": {
+      "title": "Daily Scan Allowance",
+      "remaining": "{{remaining}} of {{limit}} requests remaining",
+      "remainingOnly": "{{remaining}} requests remaining today",
+      "costNote": "This scan will use {{count}} request(s).",
+      "exhaustedTitle": "Daily scan limit reached",
+      "exhaustedDesc": "Scanning is temporarily paused because the daily request allowance has been reached. Quota resets daily.",
+      "resetAt": "Next UTC reset: {{time}}",
+      "unconfiguredTitle": "Identification service key required",
+      "unconfiguredDesc": "Configure the server identification API key in your backend environment to enable live botanical scans.",
+      "unavailable": "Allowance status currently unavailable",
+      "refresh": "Refresh allowance"
+    },
+    "validation": {
+      "invalidType": "\"{{name}}\" is not a supported format. Only JPG, JPEG, and PNG images are accepted.",
+      "tooLarge": "\"{{name}}\" exceeds the 10 MB per-image limit.",
+      "maxImages": "You can upload a maximum of 5 photographs of the same plant per scan.",
+      "noImages": "Select at least one plant photograph before running analysis."
+    }
+  },
+  "results": {
+    "title": "Botanical Identification Report",
+    "scannedOn": "Scanned on {{date}}",
+    "imagesAnalyzed": "{{count}} photograph(s) analyzed",
+    "tabs": {
+      "overview": "Overview",
+      "taxonomy": "Taxonomy",
+      "disease": "Disease Analysis"
+    },
+    "actions": {
+      "saveScan": "Save Scan",
+      "saved": "Saved to History",
+      "printReport": "Print / Save PDF",
+      "newScan": "New Scan",
+      "copyScientific": "Copy Scientific Name",
+      "copied": "Copied"
+    },
+    "overview": {
+      "primaryMatch": "Leading Species Prediction",
+      "matchScore": "Match Score",
+      "confidence": {
+        "high": "High match score",
+        "moderate": "Moderate match score",
+        "low": "Low match score — not confirmed"
+      },
+      "lowConfidenceBannerTitle": "Preliminary low-confidence result",
+      "lowConfidenceBannerDesc": "The top identification score is below 35%. Do not treat this as a confirmed botanical identification. Consider adding clearer images of leaves, flowers, or fruit from the same specimen.",
+      "noCandidatesTitle": "No matching species returned",
+      "noCandidatesDesc": "The identification model did not return a matching plant species for the submitted photographs.",
+      "scientificName": "Scientific Name",
+      "commonNames": "Common Names",
+      "family": "Family",
+      "genus": "Genus",
+      "gbifId": "Taxon Identifier",
+      "powoId": "Flora Identifier",
+      "iucnCategory": "Conservation Status",
+      "topPredictions": "Top Species Predictions",
+      "additionalCandidates": "Additional Candidates ({{count}})",
+      "showMoreCandidates": "Show {{count}} additional candidate(s)",
+      "hideMoreCandidates": "Hide additional candidates",
+      "selectCandidate": "Inspect",
+      "selectedCandidateNote": "Currently viewing species #{{rank}}",
+      "unavailable": "Information unavailable",
+      "hindiFallbackNote": "Species metadata is displayed in English because Hindi localization is not available for this record. Scientific Latin names are preserved."
+    },
+    "taxonomy": {
+      "title": "Scientific Taxonomic Classification",
+      "subtitle": "Structured seven-rank botanical classification. Scientific names remain in their canonical Latin form.",
+      "verified": "Verified against botanical taxonomy backbone",
+      "unverified": "Full taxonomic verification unavailable — showing confirmed ranks only",
+      "ranks": {
+        "kingdom": "Kingdom",
+        "phylum": "Phylum",
+        "class": "Class",
+        "order": "Order",
+        "family": "Family",
+        "genus": "Genus",
+        "species": "Species"
+      },
+      "unavailable": "Information unavailable",
+      "synonymsTitle": "Known Taxonomic Synonyms",
+      "noSynonyms": "No taxonomic synonyms recorded for this species.",
+      "gbifStatus": "Taxonomic Status",
+      "matchType": "Classification Match",
+      "gbifLink": "Taxon Record"
+    },
+    "disease": {
+      "title": "Plant Disease Analysis (Beta)",
+      "betaNotice": "Plant Disease Identification is a beta model with limited plant species and pathology coverage. It is not an all-species diagnostic tool.",
+      "disclaimerTitle": "Preliminary AI Screening Disclaimer",
+      "disclaimerBody": "AI disease predictions are preliminary and must not replace inspection by a qualified plant pathologist or agricultural extension officer, especially where serious crop damage is suspected. PlantScope AI does not fabricate symptoms, causes, or chemical treatment dosages.",
+      "states": {
+        "not_requested": {
+          "title": "Disease analysis was not enabled for this scan",
+          "desc": "Enable \"Include Plant Disease Analysis (Beta)\" on the scanner page to screen supported crop and plant pathologies (uses 1 additional scan request)."
+        },
+        "possible_disease_detected": {
+          "title": "Possible disease detected",
+          "desc": "The beta pathology model returned candidate disease matches below. Review model scores and EPPO codes carefully."
+        },
+        "no_supported_match": {
+          "title": "No supported disease match",
+          "desc": "The pathology model did not return a supported disease prediction for these images. This does not confirm the plant is healthy."
+        },
+        "inconclusive": {
+          "title": "Inconclusive result",
+          "desc": "The submitted photographs or supported disease model coverage were insufficient for a reliable pathology assessment."
+        },
+        "unavailable": {
+          "title": "Disease analysis unavailable",
+          "desc": "The disease identification request did not complete, while your plant species identification remains intact."
+        }
+      },
+      "eppoCode": "EPPO Code",
+      "modelScore": "Model Score",
+      "descriptionLabel": "Model Description",
+      "categoriesLabel": "Categories",
+      "referenceImages": "Reference Imagery & Attribution",
+      "license": "License",
+      "author": "Author",
+      "noDescription": "No description supplied for this pathology prediction."
+    },
+    "additional": {
+      "title": "Additional Information & Details",
+      "sourcesTitle": "Analysis Modules",
+      "plantnetVersion": "Model Version",
+      "languageInfo": "Requested UI Language / Result Language"
+    },
+    "notFound": {
+      "title": "Scan result not found",
+      "desc": "This scan result is no longer in active session memory or local browser history.",
+      "cta": "Start a New Scan"
+    }
+  },
+  "history": {
+    "title": "Local Scan History",
+    "subtitle": "Saved botanical identifications stored privately in your browser's IndexedDB. No photographs are stored on the server.",
+    "searchPlaceholder": "Search by common or scientific name...",
+    "sortLabel": "Sort order",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first",
+    "clearAll": "Clear All History",
+    "clearConfirmTitle": "Clear all saved scan history?",
+    "clearConfirmDesc": "This permanently removes all {{count}} saved scan record(s) from this browser's IndexedDB storage.",
+    "cancel": "Cancel",
+    "confirmClear": "Clear History",
+    "emptyTitle": "No saved scans yet",
+    "emptyDesc": "Run a plant identification and save the report to build your local botanical reference log.",
+    "emptyCta": "Identify Your First Plant",
+    "noMatches": "No saved scans match \"{{query}}\".",
+    "openScan": "Open Report",
+    "deleteScan": "Delete scan for {{name}}",
+    "recordCount": "{{count}} saved scan(s)",
+    "diseaseBadge": {
+      "possible_disease_detected": "Possible disease",
+      "no_supported_match": "No supported disease match",
+      "inconclusive": "Inconclusive disease check",
+      "not_requested": "Species scan only",
+      "unavailable": "Disease check unavailable"
+    }
+  },
+  "about": {
+    "title": "About PlantScope AI",
+    "subtitle": "A botanical identification, scientific taxonomy, and preliminary plant pathology workbench built with open-source technology.",
+    "apisTitle": "Core Botanical Engines",
+    "plantnetTitle": "Visual Species & Pathology Model",
+    "plantnetDesc": "Analyzes one to five multi-angle photographs of leaves, flowers, fruits, or bark to return ranked botanical species candidates, match scores, and optional beta pathology screening with standardized EPPO codes.",
+    "gbifTitle": "Taxonomic Classification Backbone",
+    "gbifDesc": "Resolves each leading scientific name into its complete seven-rank taxonomic hierarchy—from Kingdom through Species—along with taxonomic status and known botanical synonyms.",
+    "limitationsTitle": "Scientific Accuracy & Limitations",
+    "limitations": [
+      "Plant identification scores are probabilistic visual matches, not confirmed laboratory determinations.",
+      "Disease detection is a beta feature with limited species and pathology coverage; absence of a match does not mean a plant is healthy.",
+      "PlantScope AI never fabricates taxonomy ranks, symptoms, causes, or pesticide dosages.",
+      "Uploaded photographs are validated in server memory and discarded immediately after analysis."
+    ],
+    "privacyTitle": "Privacy & Local Storage",
+    "privacyDesc": "All scan history and language preferences are persisted exclusively in your local browser via IndexedDB and localStorage. No accounts or logins are required.",
+    "setupTitle": "Server Configuration Status",
+    "configured": "Identification service configured",
+    "notConfigured": "Identification service key not configured",
+    "setupHint": "Configure the server identification API key in your backend environment to run live plant scans."
+  },
+  "errors": {
+    "API_KEY_NOT_CONFIGURED": "The identification service key is not configured on the server. Add it to your server environment to run live scans.",
+    "INVALID_IMAGE_FORMAT": "One or more files are not valid JPG, JPEG, or PNG images.",
+    "TOO_MANY_IMAGES": "You can upload a maximum of 5 photographs per scan.",
+    "NO_IMAGES": "Please select at least one plant photograph.",
+    "IMAGE_TOO_LARGE": "One of the selected images exceeds the 10 MB per-image limit.",
+    "REQUEST_TOO_LARGE": "Total upload size exceeds the 25 MB limit.",
+    "INVALID_REQUEST": "The request or image could not be processed (HTTP 400). Try another clear photograph.",
+    "UNAUTHORIZED": "The configured identification service key was rejected (HTTP 401). Please check your server configuration.",
+    "FORBIDDEN": "Access to the identification endpoint was denied (HTTP 403).",
+    "NOT_FOUND": "No matching plant species was found for the submitted image(s) (HTTP 404).",
+    "QUOTA_EXHAUSTED": "Daily scan allowance has been reached (HTTP 429). Please wait for the daily reset.",
+    "UPSTREAM_ERROR": "The botanical recognition service returned a server error. Please try again later.",
+    "NETWORK_TIMEOUT": "The request timed out while contacting the botanical analysis service.",
+    "UNKNOWN_ERROR": "An unexpected error occurred while processing the scan."
+  },
+  "footer": {
+    "attribution": "PlantScope AI · Botanical Species Identification & Scientific Taxonomy",
+    "freeNotice": "Local-only browser history · Photographs are never stored on the server"
+  }
+}

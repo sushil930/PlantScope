@@ -1,0 +1,6 @@
+{
+  "name": "PlantScope AI",
+  "description": "Botanical plant species identification, GBIF taxonomic classification, and Pl@ntNet disease detection in English and Hindi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
