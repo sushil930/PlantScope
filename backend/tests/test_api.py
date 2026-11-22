@@ -4,8 +4,10 @@ from io import BytesIO
 import httpx
 import pytest
 from PIL import Image
+from fastapi.testclient import TestClient
 
 from app.core.config import Settings, redact_api_key
+from app.main import create_app
 from app.services.disease_service import parse_disease_response
 from app.services.gbif_service import parse_gbif_taxonomy
 from app.services.plantnet_service import clear_language_cache, parse_identify_response
@@ -29,6 +31,25 @@ def test_api_key_redaction():
     url = "https://my-api.plantnet.org/v2/identify/all?api-key=secret_12345&lang=en"
     assert "secret_12345" not in redact_api_key(url)
     assert "api-key=[REDACTED]" in redact_api_key(url)
+
+
+def test_vercel_origin_allowed_for_cors():
+    app = create_app()
+    client = TestClient(app)
+    response = client.options(
+        "/api/scan",
+        headers={
+            "Origin": "https://plant-scope-swart.vercel.app",
+            "Access-Control-Request-Method": "POST",
+            "Access-Control-Request-Headers": "content-type",
+        },
+    )
+
+    assert response.status_code == 200
+    assert (
+        response.headers["access-control-allow-origin"]
+        == "https://plant-scope-swart.vercel.app"
+    )
 
 
 def test_image_validation_rejects_invalid_and_too_many():
