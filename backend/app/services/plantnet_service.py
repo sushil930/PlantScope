@@ -244,7 +244,7 @@ async def identify_plant_species(
         "detailed": "true",
     }
     files = [("images", (name, data, mime)) for (name, data, mime) in images]
-    data = [("organs", organ) for organ in organs]
+    data = {"organs": organs}
 
     own_client = client is None
     active_client = client or httpx.AsyncClient(timeout=settings.api_timeout_seconds)
